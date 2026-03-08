@@ -1,10 +1,13 @@
 # Getting Started
 
 ## Get OAuth2 Token
+For basic auth:
+username: `mcp-client`
+password: `secret`
+
 ```js
 curl --location 'localhost:8080/oauth2/token' \
 --header 'Authorization: Basic bWNwLWNsaWVudDpzZWNyZXQ=' \
---header 'Cookie: JSESSIONID=1324796AB39C0B674F68C5D29B5BE7B8' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'grant_type=client_credentials'
 ```
@@ -18,3 +21,7 @@ curl --location 'localhost:8080/api/chat' \
 --header 'Content-Type: text/plain' \
 --data 'retrieve flight bookings'
 ```
+
+### Notes
+
+Also uses McpSyncServer to publish dynamic tool updates to Client.
